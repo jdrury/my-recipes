@@ -1,4 +1,4 @@
-import {IComponentController, IComponentOptions, ILogService} from "angular";
+import {IComponentController, IComponentOptions, ILogService} from 'angular';
 
 class RecipeContainerController implements IComponentController {
     constructor(private $log: ILogService) {

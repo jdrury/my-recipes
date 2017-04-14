@@ -18,5 +18,8 @@ module.exports = {
         extensions: ['', '.js', '.ts'],
         modulesDirectories: ['node_modules'],
         root: path.resolve('.', 'src')
+    },
+    tslint: {
+        emitErrors: true
     }
 };
