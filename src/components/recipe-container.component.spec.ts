@@ -1,10 +1,9 @@
 import { RecipeContainer } from './recipe-container.component';
-import { RecipeStore } from '../recipe-store.js';
+import { recipes } from '../recipe-store';
 
 describe('Component: RecipeContainer', () => {
 
     let $componentController: RecipeContainer;
-    const recipes = RecipeStore.recipes;
 
 //    beforeEach(module('app.recipes'));
 
