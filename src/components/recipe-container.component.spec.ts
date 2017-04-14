@@ -1,24 +1,20 @@
-import { RecipeContainer } from './recipe-container.component';
+import * as angular from 'angular';
+import '../index';
+import 'angular-mocks';
+
 import { recipes } from '../recipe-store';
 
 describe('Component: RecipeContainer', () => {
+    let $componentController: angular.IComponentControllerService;
 
-    let $componentController: RecipeContainer;
-
-//    beforeEach(module('app.recipes'));
-
-    beforeEach(inject((_$componentController_) => {
+    beforeEach(angular.mock.module('app'));
+    beforeEach(angular.mock.inject((_$componentController_: angular.IComponentControllerService) => {
         $componentController = _$componentController_;
     }));
 
     it('should have a defined component', () => {
-        let component = $componentController('RecipeContainer', null, {recipes});
+        const bindings = { recipes };
+        const component = $componentController('recipeContainer', null, bindings);
         expect(component).toBeDefined();
-    });
-
-    it('accepts a list of recipes', () => {
-        let component = $componentController('RecipeContainer', null, {recipes});
-        // TODO is this the proper way to look for bindings?
-        expect(component.recipes).toBeDefined();
     });
 });

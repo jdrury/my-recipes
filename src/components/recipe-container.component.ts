@@ -1,7 +1,20 @@
-export class RecipeContainer {
+import {IComponentController, IComponentOptions, ILogService} from "angular";
 
-    constructor() {
-
+class RecipeContainerController implements IComponentController {
+    constructor(private $log: ILogService) {
     }
 
+    $onInit() {
+        this.$log.info('inside onInit');
+    }
 }
+
+export const RecipeContainer: IComponentOptions = {
+    bindings: {
+        recipes: '<'
+    },
+
+    controller: RecipeContainerController,
+
+    template: '<div>hello</div>'
+};
