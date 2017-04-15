@@ -1,9 +1,4 @@
-Angular1 Demo app
-
 Built with Webpack, Karma, Jasmine, Typescript, Angular 1.5
-
-Based on the following guide:
-https://semaphoreci.com/community/tutorials/setting-up-angular-2-with-webpack
 
 ---
 
