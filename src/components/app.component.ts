@@ -1,14 +1,24 @@
 import { recipes } from '../recipe-store';
+import {ILogService} from 'angular';
+import {Recipes} from '../models/Recipes.model';
+import {Mealplan} from '../models/Mealplan.model';
 
 class AppController {
+    recipes: Recipes;
+    mealplan: Mealplan;
 
-    constructor() {
+    constructor(private $log: ILogService) {
 
     }
 
     $onInit() {
         this.recipes = recipes;
-        console.warn('hello');
+        this.$log.info('init app component', this.recipes);
+    }
+
+    public addToMealplan(recipeKey:string) {
+        this.mealplan[recipeKey] = 1;
+        console.warn(recipeKey);
     }
 }
 
@@ -18,7 +28,10 @@ export const App = {
     controller: AppController,
 
     template: `
-                <recipe-container recipes="$ctrl.recipes"></recipe-container>
+                <recipe-container
+                    recipes='$ctrl.recipes'
+                    add-to-mealplan='$ctrl.addToMealplan(recipeKey)'>
+                </recipe-container>
             `
 
 };

@@ -4,7 +4,7 @@ export const recipes = {
             name: 'Baked Falafel with Tahini Sauce',
             desc: 'Falafel is easy: just soak raw chickpeas until they’re soft enough to grind in the food processor, combine with some spices, shape, and bake. The baking makes lighter falafel, but they’re just as crunchy as deep-fried. This makes a big batch, which is fine, since you can refrigerate the leftovers for several days, or freeze them for a couple of months. To reheat, wrap them in foil and bake at 350°F until they’re hot throughout, 15 to 30 minutes depending on whether they were frozen. Here are some serving suggestions: Make a sandwich with half a whole wheat pita, lettuce, tomatoes, cucumbers, and other raw vegetables, then drizzle with sauce. Or add lemon juice to the sauce and eat on top of a green salad, using the tahini for dressing.',
             time: '45 minutes',
-            yield: '8 servings',
+            serves: '8 servings',
             difficulty: 'easy',
             imgUrl: 'http://markbittman.com/wp-content/uploads/2013/06/Nutty-Falafel-290x216.png',
         },
@@ -70,8 +70,8 @@ export const recipes = {
             name: 'Eggplant Un-Parmesan',
             desc: 'This take on eggplant Parmesan proves that (a) you don’t need a lot of oil to cook eggplant, and (b) you don’t need gobs of cheese to make it delicious. Try using zucchini or portobello mushrooms as variations, or serve the vegetables and tomato sauce over polenta or a more sub-stantial meal. If you can’t fnd whole wheat breadcrumbs (panko-style are best),make your own by pulsing lightly toasted whole-grain bread in the food processor or blender.',
             time: 'about 1 hour',
-            yield: '4 servings',
-            difficult: 'medium',
+            serves: '4 servings',
+            difficulty: 'medium',
             imgUrl: 'http://markbittman.com/wp-content/uploads/2013/04/Eggplant-Un-Parmesan-11.jpg',
         },
         ingredients: [
@@ -124,7 +124,7 @@ export const recipes = {
             name: 'Fennel and Celery Salad',
             desc: 'Fennel is among my favorite cold-weather staples. Oddly enough I like the pairing of fennel and celery. Though their textures are similar, their flavors are so wildly different that the combination is striking. With little more than olive oil, loads of lemon juice, and pepper (and some Parmesan, why not?), they create just about as refreshing an uncooked dish as you can put on the table this time of year.',
             time: '???',
-            yield: '4 to 6 servings',
+            serves: '4 to 6 servings',
             difficulty: 'easy',
             imgUrl: 'http://markbittman.com/wp-content/uploads/2013/03/Nov08_Minis_26_edit_0.jpg',
         },
@@ -138,19 +138,24 @@ export const recipes = {
                 name: 'celery ribs, trimmed',
             },
             {
-                quantity: '1/4 cup extra virgin olive oil',
+                quantity: '1/4 cup',
+                name: 'extra virgin olive oil',
             },
             {
-                name: '3 tablespoons fresh lemon juice, more to taste'
+                quantity: '3 tablespoons',
+                name: 'fresh lemon juice, more to taste'
             },
             {
-                name: 'Salt to taste',
+                quantity: 'to taste',
+                name: 'Salt',
             },
             {
-                name: '1/4 teaspoon black pepper, more to taste'
+                quantity: '1/4 teaspoon',
+                name: 'black pepper',
             },
             {
-                name: 'Freshly shaved Parmesan cheese.'
+                quantity: 'to taste',
+                name: 'Parmesan cheese.'
             },
         ],
         instructions: [
