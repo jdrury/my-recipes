@@ -1,7 +1,7 @@
 import * as angular from 'angular';
 import 'angular-mocks';
 
-import '../index';
+import '../app.module';
 import { recipes } from '../recipe-store';
 
 describe('Component: RecipeContainer', () => {

@@ -16,8 +16,8 @@ module.exports = {
     },
     devtool: 'source-map',
     entry: {
-        app: [ path.resolve(rootDir, 'src', 'bootstrap') ],
-        vendor: [ path.resolve(rootDir, 'src', 'vendor') ]
+        app: [ path.resolve(rootDir, 'src', 'app.module') ],
+//        vendor: [ path.resolve(rootDir, 'src', 'vendor') ]
     },
     module: {
         loaders: [
@@ -38,7 +38,7 @@ module.exports = {
         new HtmlWebpack({
             filename: 'index.html',
             inject: 'body',
-            template: path.resolve(rootDir, 'src', 'app', 'index.html')
+            template: path.resolve(rootDir, 'src', 'index.html')
         })
     ],
     resolve: {

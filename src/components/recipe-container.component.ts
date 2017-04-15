@@ -5,7 +5,6 @@ class RecipeContainerController implements IComponentController {
     }
 
     $onInit() {
-        this.$log.info('inside onInit');
     }
 }
 
@@ -16,5 +15,10 @@ export const RecipeContainer: IComponentOptions = {
 
     controller: RecipeContainerController,
 
-    template: '<div>hello</div>'
+    template: `
+                <div ng-repeat="(key, recipe) in $ctrl.recipes">
+                    <h4 ng-bind="recipe.details.name"></h4>
+                    <div ng-bind="recipe.details.desc"></div>
+                </div>
+            `
 };
