@@ -1,8 +1,8 @@
 import * as angular from 'angular';
 import 'angular-mocks';
 
-import '../app.module';
-import { recipes } from '../recipe-store';
+import '../../app.module';
+import { recipes } from '../../recipe-store';
 
 describe('Component: RecipeContainer', () => {
     let $componentController: angular.IComponentControllerService;

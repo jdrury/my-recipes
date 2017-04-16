@@ -1,5 +1,5 @@
 import {ILogService} from 'angular';
-import {RecipeDetails} from '../models/RecipeDetails.model';
+import {RecipeDetails} from '../../models/RecipeDetails.model';
 
 class RecipeCardController {
 
@@ -20,6 +20,8 @@ class RecipeCardController {
         if (this.isDescCollapsed) {
             desc = desc.split(' ').slice(0, 24).join(' ') + '...';
         }
+
+        return desc;
     }
 }
 export const RecipeCard = {
@@ -40,7 +42,7 @@ export const RecipeCard = {
 
                 <button
                     class="btn btn-primary btn-sm"
-                    ng-click="$ctrl.addToMealplan({recipeKey: $ctrl.index})">Select Recipe</button>
+                    ng-click="$ctrl.addToMealplan({recipeKey: $ctrl.recipeKey})">Select Recipe</button>
             </div>
             `
 }

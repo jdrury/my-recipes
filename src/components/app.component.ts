@@ -5,7 +5,7 @@ import {Mealplan} from '../models/Mealplan.model';
 
 class AppController {
     recipes: Recipes;
-    mealplan: Mealplan;
+    mealplan: Mealplan = {};
 
     constructor(private $log: ILogService) {
 
@@ -17,8 +17,10 @@ class AppController {
     }
 
     public addToMealplan(recipeKey:string) {
-        this.mealplan[recipeKey] = 1;
-        console.warn(recipeKey);
+        if (recipeKey) {
+            this.mealplan[recipeKey] = 1;
+            console.log(this.mealplan);
+        }
     }
 }
 
@@ -28,9 +30,13 @@ export const App = {
     controller: AppController,
 
     template: `
+                <mealplan-container
+                    mealplan="$ctrl.mealplan"
+                    recipes="$ctrl.recipes">
+                </mealplan-container>
                 <recipe-container
-                    recipes='$ctrl.recipes'
-                    add-to-mealplan='$ctrl.addToMealplan(recipeKey)'>
+                    recipes="$ctrl.recipes"
+                    add-to-mealplan="$ctrl.addToMealplan(recipeKey)">
                 </recipe-container>
             `
 

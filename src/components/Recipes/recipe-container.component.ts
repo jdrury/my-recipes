@@ -19,12 +19,14 @@ export const RecipeContainer: IComponentOptions = {
     controller: RecipeContainerController,
 
     template: `
-                <div ng-repeat="(key, recipe) in $ctrl.recipes">
-                    <recipe-card
-                        index="key"
-                        details="recipe.details"
-                        add-to-mealplan="$ctrl.addToMealplan(recipeKey)">
-                    </recipe-card>
-                </div>
+                <section class="recipes-container">
+                    <div ng-repeat="(recipeKey, recipe) in $ctrl.recipes">
+                        <recipe-card
+                            recipe-key="recipeKey"
+                            details="recipe.details"
+                            add-to-mealplan="$ctrl.addToMealplan({recipeKey})">
+                        </recipe-card>
+                    </div>
+                </section>
             `
 };
