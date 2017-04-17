@@ -34,6 +34,10 @@ export const App = {
                     mealplan="$ctrl.mealplan"
                     recipes="$ctrl.recipes">
                 </mealplan-container>
+                <ingredient-container
+                    mealplan="$ctrl.mealplan"
+                    recipes="$ctrl.recipes">
+                </ingredient-container>
                 <recipe-container
                     recipes="$ctrl.recipes"
                     add-to-mealplan="$ctrl.addToMealplan(recipeKey)">
